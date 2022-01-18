@@ -1,11 +1,22 @@
 $mainColor: #212121;
 $hoverColor: #c4c4c433;
 $fontColor: #383838;
+$shapesColor: #EAEAEA;
+$buttonColor: #4F4E8C;
 
 @mixin flexCenter() {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin shapesSelectionStyles($borderRadius) {
+    padding: 20px 50px;
+    width: 100%;
+    &:hover {
+            background: $hoverColor;
+    }
+    border-radius: $borderRadius;
 }
 
 * {
@@ -30,29 +41,15 @@ html {
     }
 
     #square {
-        padding: 20px 50px;
-        width: 100%;
-        border-radius: 10px 0px 0px 10px;
-        &:hover {
-            background: $hoverColor;
-        }
+        @include shapesSelectionStyles(10px 0px 0px 10px);
     }
 
     #triangle {
-        padding: 20px 50px;
-        width: 100%;
-        &:hover {
-            background: $hoverColor;
-        }
+       @include shapesSelectionStyles(0px);
     }
 
     #circle {
-        padding: 20px 50px;
-        width: 100%;
-        border-radius: 0px 10px 10px 0px;
-        &:hover {
-            background: $hoverColor;
-        }
+        @include shapesSelectionStyles(0px 10px 10px 0px);
     }
 
     .shapesContainer {
@@ -64,5 +61,79 @@ html {
         background: $mainColor;
         border-radius: 10px;
         box-shadow: 5px 5px 30px #2626264a;
+    }
+}
+
+.squareCalculatorContainer, .triangleCalculatorContainer, .circleCalculatorContainer {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: $mainColor;
+    width: 540px;
+    height: fit-content;
+    padding: 30px 70px;
+    align-items: center;
+
+    img {
+        width: 200px;
+    }
+
+    form {
+
+        label {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        div {
+            span {
+                display: none;
+                background: white;
+                height: 35px;
+                border-radius: 50px;
+                align-items: center;
+                padding: 0 10px;
+                color: #5a5a5a;
+                font-size: 1.3rem;
+            }
+        }
+
+        display: grid;
+        row-gap: 10px;
+        width: 100%;
+        margin-top: 20px;
+        
+        .sideInput {
+            height: 35px;
+            background: $shapesColor;
+            border-style: none;
+            border-radius: 2px;
+            padding: 10px;
+        }
+
+        .buttonContainer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            height: 35px;
+            width: 49%;
+            background: $buttonColor;
+            border-style: none;
+            border-radius: 3px;
+            color: white;
+            &:hover {
+                background: #7776AC;
+            }
+        }
+        
+        .circleArea {
+            width: 100%;
+        }
+    }
+    .error {
+        border-color: red;
     }
 }

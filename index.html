@@ -12,6 +12,7 @@
         
     </header>
     <main>
+
         <section class="shapesSelection">
             <h1>¿Qué forma quieres calcular?</h1>
             <div class="shapesContainer">
@@ -19,7 +20,51 @@
                 <img src="./img/triangle.svg" alt="" id="triangle" class="shape">
                 <img src="./img/circle.svg" alt="" id="circle" class="shape">
             </div>
+            <div class="squareCalculatorContainer calculatorContainer">
+                <img class="mainSquare" src="./img/square.svg" alt="square">
+                <form action="" class="squareForm">
+                    <div class="shapeResult"><span id="squareResult"></span></div>
+                    <input type="text" name="sideA" class="sideInput error" id="sideA" placeholder="Ingresa el lado A">
+                    <input type="text" name="sideB" class="sideInput error" id="sideB" placeholder="Ingresa el lado B">
+                    <div class="buttonContainer">
+                        <button class="area" onclick="getSquareArea(); return false">Calcular Area</button>
+                        <button class="perimeter" onclick="getSquarePerimeter(); return false">Calcular Perímetro</button>
+                    </div>
+                </form>
+            </div>
+            <div class="triangleCalculatorContainer calculatorContainer">
+                <img class="mainTriangle" src="./img/triangle.svg" alt="triangle">
+                <form action="" class="triangleForm">
+                    <div class="shapeResult"><span id="triangleResult"></span></div>
+                    <label for="triangleSideA">Lado a</label>
+                    <input type="text" name="sideA" class="sideInput" id="triangleSideA" placeholder="Ingresa el lado A">
+                    <label for="triangleBase">Base</label>
+                    <input type="text" name="triangleBase" class="sideInput" id="triangleBase" placeholder="Ingresa la base">
+                    <label for="triangleSideC">Lado c</label>
+                    <input type="text" name="sideC" class="sideInput" id="triangleSideC" placeholder="Ingresa el lado C">
+                    <label for="triangleHeight">Altura</label>
+                    <input type="text" name="triangleHeight" class="sideInput" id="triangleHeight" placeholder="Ingresa la altura">
+                    <div class="buttonContainer">
+                        <button class="area" onclick="getTriangleArea(); return false">Calcular Area</button>
+                        <button class="perimeter" onclick="getTrianglePerimeter(); return false">Calcular Perímetro</button>
+                    </div>
+                </form>
+            </div>
+            <div class="circleCalculatorContainer calculatorContainer">
+                <img class="mainCircle" src="./img/circle.svg" alt="circle">
+                <form action="" class="circleForm">
+                    <div class="shapeResult"><span id="circleResult"></span></div>
+                    <input type="text" name="circleRadius" class="sideInput" id="circleRadius" placeholder="Ingresa el Radio">
+                    <div class="buttonContainer">
+                        <button class="diametro" onclick="getCircleDiameter(); return false">Calcular Diámetro</button>
+                        <button class="perimeter" onclick="getCirclePerimeter(); return false">Calcular Perímetro</button>
+                    </div>
+                    <button class="circleArea" onclick="getCircleArea();return false">Calcular Área</button>
+                </form>
+            </div>
         </section>
+
     </main>
+    <script src="./scripts.js"></script>
 </body>
 </html>

@@ -46,6 +46,7 @@ html {
 .shapesSelection #triangle {
   padding: 20px 50px;
   width: 100%;
+  border-radius: 0px;
 }
 
 .shapesSelection #triangle:hover {
@@ -74,5 +75,92 @@ html {
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 30px #2626264a;
           box-shadow: 5px 5px 30px #2626264a;
+}
+
+.squareCalculatorContainer, .triangleCalculatorContainer, .circleCalculatorContainer {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #212121;
+  width: 540px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px 70px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.squareCalculatorContainer img, .triangleCalculatorContainer img, .circleCalculatorContainer img {
+  width: 200px;
+}
+
+.squareCalculatorContainer form, .triangleCalculatorContainer form, .circleCalculatorContainer form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.squareCalculatorContainer form label, .triangleCalculatorContainer form label, .circleCalculatorContainer form label {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.squareCalculatorContainer form div span, .triangleCalculatorContainer form div span, .circleCalculatorContainer form div span {
+  display: none;
+  background: white;
+  height: 35px;
+  border-radius: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10px;
+  color: #5a5a5a;
+  font-size: 1.3rem;
+}
+
+.squareCalculatorContainer form .sideInput, .triangleCalculatorContainer form .sideInput, .circleCalculatorContainer form .sideInput {
+  height: 35px;
+  background: #EAEAEA;
+  border-style: none;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.squareCalculatorContainer form .buttonContainer, .triangleCalculatorContainer form .buttonContainer, .circleCalculatorContainer form .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.squareCalculatorContainer form button, .triangleCalculatorContainer form button, .circleCalculatorContainer form button {
+  height: 35px;
+  width: 49%;
+  background: #4F4E8C;
+  border-style: none;
+  border-radius: 3px;
+  color: white;
+}
+
+.squareCalculatorContainer form button:hover, .triangleCalculatorContainer form button:hover, .circleCalculatorContainer form button:hover {
+  background: #7776AC;
+}
+
+.squareCalculatorContainer form .circleArea, .triangleCalculatorContainer form .circleArea, .circleCalculatorContainer form .circleArea {
+  width: 100%;
+}
+
+.squareCalculatorContainer .error, .triangleCalculatorContainer .error, .circleCalculatorContainer .error {
+  border-color: red;
 }
 /*# sourceMappingURL=styles.css.map */
